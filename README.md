@@ -31,7 +31,7 @@ var options = {
             <i class="fa fa-plus"></i>
         </button>
     </div>
-    <input type="text" class="form-control counter" data-default="1" data-min="00" data-max="100">
+    <input type="text" class="form-control counter" data-default="1" data-min="0" data-max="100">
     <div class="input-group-append">
         <button type="button" class="btn-subtract btn btn-primary">
             <i class="fa fa-minus"></i>
