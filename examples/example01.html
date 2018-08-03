@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="jquery input-counter example">
+    <meta name="author" content="lkraemer.de">
+
+    <title>jQuery InputCounter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <!-- FontAwesome core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <nav class="site-header py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2" href="#">
+                <i class="fa fa-plus fa-2x"></i>
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="example1.html">example 1</a>
+        </div>
+    </nav>
+
+    <div class="position-relative overflow-hidden p-3 p-md-6 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h3>input counter with min and max value<br />between 10 and 20</h3>
+            <div class="input-counter input-group">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn-add btn btn-primary">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <input type="text" class="form-control counter" data-min="10" data-max="20" data-default="15">
+                <div class="input-group-append">
+                    <button type="button" class="btn-subtract btn btn-primary">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <br />
+            <br />
+            <h3>input counter with default value 5</h3>
+            <div class="input-counter input-group">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn-add btn btn-primary">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <input type="text" class="form-control counter" data-default="5">
+                <div class="input-group-append">
+                    <button type="button" class="btn-subtract btn btn-primary">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <br />
+            <br />
+            <h3>input counter with max value 10</h3>
+            <div class="input-counter input-group">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn-add btn btn-primary">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <input type="text" class="form-control counter" data-default="0" data-max="10">
+                <div class="input-group-append">
+                    <button type="button" class="btn-subtract btn btn-primary">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <br />
+            <br />
+            <h3>input counter with min value -20</h3>
+            <div class="input-counter input-group">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn-add btn btn-primary">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <input type="text" class="form-control counter" data-default="0" data-min="-20">
+                <div class="input-group-append">
+                    <button type="button" class="btn-subtract btn btn-primary">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <script src="../dist/js/jquery.input-counter.min.js"></script>
+    <script>
+        var options = {
+            selectors: {
+                addButtonSelector: '.btn-add',
+                subtractButtonSelector: '.btn-subtract',
+                inputSelector: '.counter',
+            }
+        };
+
+        $(".input-counter").inputCounter(options);
+    </script>
+</body>
+
+</html>
