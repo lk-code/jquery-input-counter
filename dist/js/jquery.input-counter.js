@@ -5,7 +5,11 @@ jQuery.fn.inputCounter = function (options) {
             addButtonSelector: '.btn-add',
             subtractButtonSelector: '.btn-subtract',
             inputSelector: '.input-counter',
-        }
+        },
+        settings: {
+            checkValue: true,
+            isReadOnly: true,
+        },
     };
 
     var settings = $.extend({}, defaults, options);
@@ -15,14 +19,22 @@ jQuery.fn.inputCounter = function (options) {
             var me = this;
 
             methods.registerEvents(element);
-            methods.loadDefaultValue(element);
+            methods.initInput(element);
         },
 
-        loadDefaultValue: function (element) {
+        initInput: function (element) {
             var me = this;
             var defaultValue = $(element).find(settings.selectors.inputSelector).data("default");
 
+            // the default value
             $(element).find(settings.selectors.inputSelector).val(defaultValue);
+
+            // set readonly-value
+            if(settings.settings.isReadOnly == true) {
+                $(element).find(settings.selectors.inputSelector).prop('readonly', true);
+            } else {
+                $(element).find(settings.selectors.inputSelector).prop('readonly', false);
+            }
         },
 
         registerEvents: function (element) {
@@ -85,6 +97,10 @@ jQuery.fn.inputCounter = function (options) {
             var input = $($(element).find(settings.selectors.inputSelector)[0]);
             var minValue = input.data("min");
             var maxValue = input.data("max");
+
+            if(settings.settings.checkValue != true) {
+                return true;
+            }
 
             if (minValue == undefined && maxValue == undefined) {
                 return true;

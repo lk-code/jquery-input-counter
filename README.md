@@ -18,7 +18,11 @@ var options = {
         addButtonSelector: '.btn-add',              // the selector for the add button
         subtractButtonSelector: '.btn-subtract',    // the selector for the subtract button
         inputSelector: '.counter',                  // the selector for the <input />-field
-    }
+    },
+    settings: {
+        checkValue: true,                           // if true, verifies that the new value is within the min and max values
+        isReadOnly: true,                           //^if true, set the input-field as readonly
+    },
 };
 ```
 
